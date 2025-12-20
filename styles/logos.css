@@ -1,8 +1,8 @@
-.logo {
+.logos {
   background-color: var(--color-bg-gray);
 }
 
-.logo__list {
+.logos__list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -12,6 +12,6 @@
   gap: 4vw;
 }
 
-.logo__item svg {
+.logos__item svg {
   fill: var(--color-text-primary);
 }

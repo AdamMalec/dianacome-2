@@ -21,7 +21,7 @@
   background-position: left 96%;
   opacity: 0;
 
-  animation: fade-in 2s linear 1.8s forwards;
+  animation: fade-in 1.8s linear 1.6s forwards;
 }
 
 .hero__title {
