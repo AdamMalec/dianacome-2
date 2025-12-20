@@ -3,4 +3,5 @@
 @import "./styles/_utilities.css";
 @import "./styles/_base.css";
 @import "./styles/button.css";
+@import "./styles/theme-switcher.css";
 @import "./styles/hero.css";
