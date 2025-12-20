@@ -1,0 +1,17 @@
+.logo {
+  background-color: var(--color-bg-gray);
+}
+
+.logo__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  justify-content: center;
+  gap: 4vw;
+}
+
+.logo__item svg {
+  fill: var(--color-text-primary);
+}

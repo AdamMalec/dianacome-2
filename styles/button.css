@@ -1,0 +1,21 @@
+[class$="__button"] {
+  padding: 0.8em 1em;
+  text-transform: capitalize;
+  color: var(--color-white);
+  background-color: var(--color-bg-black);
+  border-radius: var(--radius-s);
+  transition: background-color 0.12s;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--color-accent);
+  }
+}
+
+/* html[data-color-theme='dark'] {
+  [class$="__button"] {
+    color: var(--color-text-white);
+    background-color: var(--color-black);
+  }
+} */

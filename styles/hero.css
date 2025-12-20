@@ -1,0 +1,133 @@
+.hero {
+  background-color: var(--color-bg-gray);
+}
+
+.hero__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 100dvh;
+}
+
+.hero__container::before {
+  position: absolute;
+  content: '';
+  inset: 0;
+  background-image: url("../img/shape-3.svg");
+  background-repeat: no-repeat;
+  background-size: 20%;
+  background-position: left 96%;
+  opacity: 0;
+
+  animation: fade-in 2s linear 1.8s forwards;
+}
+
+.hero__title {
+  margin-top: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 26px;
+  font-size: clamp(1.2rem, 1rem + 1.2vw, 32px);
+  font-weight: 900;
+  color: var(--color-text-secondary);
+  text-align: center;
+  opacity: 0;
+
+  animation: pop-in-from-bottom 0.5s ease-out forwards;
+}
+
+.hero__slogan {
+  margin-top: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1.4rem, 1rem + 4vw, 76px);
+  font-weight: 900;
+  text-align: center;
+  line-height: 1.2;
+  opacity: 0;
+
+  animation: pop-in-from-bottom 0.5s ease-out 0.3s forwards;
+
+  span {
+    color: var(--color-accent);
+  }
+}
+
+.hero__info {
+  max-width: 84ch;
+  width: 80%;
+  margin: 0;
+  font-size: clamp(1rem, 0.5rem + 1vw, 1.6rem);
+  text-align: center;
+  opacity: 0;
+
+  animation: pop-in-from-bottom 0.5s ease-out 0.6s forwards;
+}
+
+.hero__button {
+  opacity: 0;
+  animation: fade-in 0.6s ease-out 0.9s forwards;
+}
+
+
+.animate-pop-in-bottom {
+  animation: pop-in-from-bottom 0.4s ease-out forwards;
+}
+
+.animate-pop-in-top {
+  animation: pop-in-from-top 0.4s ease-out forwards;
+}
+
+.animate-fade-slide-top {
+  animation: fade-slide-top 0.6s ease-out forwards;
+}
+
+.animate-fade-spring-top {
+  animation: fade-slide-top 1.2s linear(0, 0.544 5.5%, 0.947 11.5%, 1.213 18.1%, 1.298 21.7%, 1.352 25.5%, 1.372 28.2%, 1.379 31.1%, 1.374 34.2%, 1.357 37.6%, 1.307 43.7%, 1.121 61.8%, 1.074 67.8%, 1.04 73.7%, 1.007 84.7%, 1) forwards;
+}
+
+@keyframes pop-in-from-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(32px) scale(0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes pop-in-from-top {
+  0% {
+    opacity: 0;
+    transform: translateY(-32px) scale(0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-slide-top {
+  0% {
+    opacity: 0;
+    transform: translateY(64px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

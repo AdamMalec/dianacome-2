@@ -1,0 +1,57 @@
+/* console.log() for CSS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* outline: 2px solid crimson; */
+}
+
+/* Modern version of container class according Kevin Powell */
+/* https://www.youtube.com/watch?v=DGOeyJjq80g&list=LL&index=8&t=1063s */
+.container {
+  --max-width: 1298px;
+  --padding: 2rem;
+
+  width: min(var(--max-width), 100% - (var(--padding) * 2)) ;
+  margin-inline: auto;
+}
+
+@media screen and (width <= 1024px) {
+  .container {
+    --padding: 1.6rem;
+  }
+}
+
+@media screen and (width <= 768px) {
+  .container {
+    --padding: 1.4rem;
+  }
+}
+
+@media screen and (width <= 576px) {
+  .container {
+    --padding: 1rem;
+  }
+}
+
+/* Breaking out of a central container */
+/* https://css-irl.info/breaking-out-of-a-central-wrapper/ */
+.container__full-width {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translate3d(-50%, 0, 0);
+}
+
+/* Helper to visually hide elements but keep them accessible to assistive technologies */
+.visually-hidden {
+  position: absolute;
+  margin: -1px;
+  clip-path: inset(50%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap
+}

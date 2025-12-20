@@ -1,0 +1,36 @@
+:root {
+  --color-white: hsl(0, 0%, 98%);
+  --color-black: hsl(0, 0%, 6%);
+  --color-accent: hsl(11, 74%, 53%);
+
+  --color-text-primary: var(--color-black);
+  --color-text-secondary: hsl(0, 0%, 50%);
+
+  --color-bg-default: var(--color-white);
+  --color-bg-black: var(--color-black);
+  --color-bg-gray: hsl(0, 0%, 85%);
+
+  --radius-l: 16px;
+  --radius-m: 12px;
+  --radius-s: 8px;
+
+  --shadow: 4px 4px 12px 0 rgba(0, 0, 0, 0.34);
+}
+
+/* Dark Theme for Operation Systenm option */
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --color-text-primary: var(--color-white);
+    --color-text-secondary: hsl(0, 0%, 65%);
+    --color-bg-default: var(--color-black);
+    --color-bg-gray: hsl(0, 0%, 12%);
+  }
+} */
+
+/* Dark Theme for custom JS option (theme switcher) */
+html[data-color-theme='dark'] {
+  --color-text-primary: var(--color-white);
+  --color-text-secondary: hsl(0, 0%, 60%);
+  --color-bg-default: var(--color-black);
+  --color-bg-gray: hsl(0, 0%, 12%);
+}
