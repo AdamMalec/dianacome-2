@@ -1,5 +1,5 @@
 :root {
-  --color-white: hsl(0, 0%, 98%);
+  --color-white: hsl(43, 19%, 93%);
   --color-black: hsl(0, 0%, 6%);
   --color-accent: hsl(11, 74%, 53%);
 
@@ -8,7 +8,7 @@
 
   --color-bg-default: var(--color-white);
   --color-bg-black: var(--color-black);
-  --color-bg-gray: hsl(0, 0%, 85%);
+  --color-bg-gray: hsl(43, 19%, 85%);
 
   --radius-l: 16px;
   --radius-m: 12px;
