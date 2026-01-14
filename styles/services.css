@@ -1,0 +1,62 @@
+.services__subtitle {
+  margin-top: 0.6em;
+}
+
+.services__list {
+  display: grid;
+  gap: 18px;
+  margin: 0;
+  margin-top: 48px;
+  padding: 0;
+  list-style: none;
+
+  @media screen and (width > 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.servis {
+  padding: 32px 32px 40px 32px;
+  background-color: var(--color-bg-gray);
+  border-radius: var(--radius-l);
+}
+
+.servis__image {
+  border-radius: var(--radius-m);
+}
+
+.servis__title {
+  font-family: 'Montserrat';
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.servis__features {
+  margin-top: 18px;
+  padding-left: 10px;
+  list-style: none;
+
+}
+
+.servis__item {
+  padding-left: 8px;
+
+  &:not(:first-child) {
+    margin-top: 0.3rem;
+  }
+
+  &:last-child span {
+    text-decoration: underline solid var(--color-accent) 2px;
+    text-underline-offset: 5px;
+  }
+
+  &::marker {
+    content: "•";
+  }
+}
+
+.servis__button {
+  display: block;
+  margin-top: 2rem;
+  margin-inline: auto;
+}
