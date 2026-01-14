@@ -4,7 +4,7 @@
 
 .logos__list {
   margin: 0;
-  padding: 0;
+  padding-block: 2em;
   list-style: none;
 
   display: flex;
