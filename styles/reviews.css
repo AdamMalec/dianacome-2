@@ -12,6 +12,7 @@
   padding-bottom: 40px;
   background-color: var(--color-bg-gray);
   border-radius: var(--radius-l);
+  box-shadow: var(--shadow);
 
   &:not(:first-child) {
     margin-top: 24px;
