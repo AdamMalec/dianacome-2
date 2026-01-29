@@ -1,6 +1,6 @@
 :root {
   --color-white: hsl(43, 19%, 94%);
-  --color-black: hsl(0, 0%, 6%);
+  --color-black: hsl(0, 0%, 8%);
   --color-accent: hsl(11, 74%, 53%);
 
   --color-text-primary: var(--color-black);
