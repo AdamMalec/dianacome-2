@@ -1,0 +1,70 @@
+.baner {
+  position: relative;
+  min-height: 100vh;
+  background-color: pink;
+  background-image: url(./../img/kobieta-z-widokiem-z-boku-sluchawek_edit.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media screen and (width <=768px) {
+    background-position: right;
+  }
+
+  @media screen and (width <=518px) {
+    background-position-x: 85%;
+  }
+
+  @media screen and (width <=420px) {
+    background-position-x: 76%;
+  }
+}
+
+.baner__title,
+.baner__button {
+  position: absolute;
+}
+
+.baner__title {
+  width: 16ch;
+  margin-top: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1.2rem, 1rem + 3vw, 54px);
+  font-weight: 900;
+  line-height: 1.2;
+  text-wrap: initial;
+  color: var(--color-black);
+
+  span {
+    color: var(--color-accent);
+  }
+
+  @media screen and (width <=768px) {
+    right: 4vw;
+    width: 14ch;
+    color: var(--color-white);
+    text-align: right;
+  }
+}
+
+.baner__button {
+  bottom: 10vh;
+  font-size: 22px;
+  font-weight: 600;
+  background-color: var(--color-accent);
+
+  &:hover,
+  &:focus-visible {
+    background-color: #f56343;
+  }
+
+  @media screen and (width <=768px) {
+    font-size: 20px;
+    right: 4vw;
+  }
+
+  @media screen and (width <=518px) {
+    bottom: 5vh;
+    font-size: 18px;
+  }
+}
