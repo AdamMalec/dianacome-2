@@ -1,0 +1,99 @@
+.footer {
+
+  /* reset default styles */
+  input,
+  textarea {
+    all: unset;
+    box-sizing: border-box;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 32px 36px 42px 36px;
+    background-color: var(--color-bg-gray);
+    border-radius: var(--radius-s);
+    box-shadow: var(--shadow);
+
+    @media screen and (width <=1280px) {
+      width: 86%;
+    }
+
+    @media screen and (width <=1024px) {
+      width: 90%;
+    }
+
+    @media screen and (width <=962px) {
+      width: 100%;
+    }
+
+    @media screen and (width <=768px) {
+      padding-inline: 24px;
+    }
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    padding-bottom: 10px;
+
+    &:not([for="phone"]):after {
+      content: " *";
+      color: var(--color-accent);
+    }
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--color-text-primary);
+    border-radius: 4px;
+    background-color: var(--color-bg-default);
+
+    &:focus {
+      outline: 2px solid var(--color-accent);
+    }
+  }
+
+  button[type="submit"] {
+    min-width: -webkit-fill-available;
+    min-width: fit-content;
+    padding: 0;
+    color: inherit;
+    background: none;
+    border: none;
+
+    height: 46px;
+    margin-top: 24px;
+    text-transform: uppercase;
+    color: var(--color-white);
+    background-color: var(--color-black);
+    border-radius: 4px;
+    transition: background-color 0.24s;
+
+    &:hover,
+    &:focus-visible {
+      background-color: var(--color-accent);
+      cursor: pointer;
+    }
+  }
+}
+
+/* crutch for form button */
+html[data-color-theme='dark'] .footer {
+  button[type="submit"] {
+    background-color: var(--color-accent);
+
+    &:hover,
+    &:focus-visible {
+      background-color: #f56343;
+    }
+  }
+}
