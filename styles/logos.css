@@ -2,16 +2,61 @@
   background-color: var(--color-bg-gray);
 }
 
+.logos__container {
+  --gap: 64px;
+  display: flex;
+  gap: var(--gap);
+  max-width: 60vw;
+  overflow: hidden;
+  user-select: none;
+
+  mask-image: linear-gradient(to right,
+      hsl(0 0% 0% / 0),
+      hsl(0 0% 0% / 1) 20%,
+      hsl(0 0% 0% / 1) 80%,
+      hsl(0 0% 0% / 0));
+
+  @media screen and (width <= 1280px) {
+    --gap: 56px;
+    max-width: 80vw;
+  }
+
+  @media screen and (width <= 1024px) {
+    --gap: 48px;
+    max-width: 90vw;
+  }
+}
+
 .logos__list {
   margin: 0;
+  padding: 0;
   padding-block: 2em;
   list-style: none;
 
   display: flex;
-  justify-content: center;
-  gap: 4vw;
+  justify-content: space-around;
+  flex-shrink: 0;
+  gap: var(--gap);
+  min-width: 100%;
+
+  animation: scroll 26s linear infinite;
+}
+
+.logos__item {
+  width: 72px;
+  aspect-ratio: 1;
 }
 
 .logos__item svg {
   fill: var(--color-text-primary);
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
 }
