@@ -1,6 +1,16 @@
 .about {
   display: grid;
   gap: 24px;
+
+  padding-bottom: 148px !important;
+
+  @media screen and (width <=1024px) {
+    padding-bottom: 100px !important;
+  }
+
+  @media screen and (width <=768px) {
+    padding-bottom: 64px !important;
+  }
 }
 
 .about__image {
@@ -20,7 +30,7 @@
   text-wrap: balance;
   color: var(--color-text);
 
-  @media screen and (width <= 768px) {
+  @media screen and (width <=768px) {
     text-align: center;
   }
 }
@@ -36,15 +46,24 @@
 .about__info {
   p {
     max-width: 60ch;
+    font-size: 20px;
 
     &:first-child {
       margin-top: 0;
+    }
+
+    @media screen and (width <=1024px) {
+      font-size: 19px;
     }
   }
 }
 
 .values__title {
   margin-bottom: 0;
+
+  @media screen and (width <=992px) {
+    margin-top: 0;
+  }
 }
 
 .valuest__list {

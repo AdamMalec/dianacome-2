@@ -1,7 +1,19 @@
 .footer {
-  padding-top: 96px;
+  padding-top: 112px;
   padding-bottom: 16px;
   color: var(--color-text-primary);
+
+  @media screen and (width <= 1024px) {
+    padding-top: 96px;
+  }
+
+  @media screen and (width <= 768px) {
+    padding-top: 64px;
+  }
+
+  @media screen and (width <= 576px) {
+    padding-top: 48px;
+  }
 }
 
 .footer__wrapper {

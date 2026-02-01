@@ -60,29 +60,36 @@
   gap: 16px;
   padding: 24px;
   font-size: 28px;
+  font-size: clamp(20px, 14px + 1vw, 32px);
   font-weight: 700;
   border-top-left-radius: var(--radius-s);
   border-top-right-radius: var(--radius-s);
 
   @media screen and (width <=864px) {
     padding: 22px;
-    font-size: 24px;
-    line-height: 1.2;
+    line-height: 1.3;
   }
 
   @media screen and (width <=768px) {
     padding: 20px;
-    font-size: 20px;
+  }
+
+  @media screen and (width <=576px) {
+    padding: 18px;
   }
 }
 
 .tab__label::after {
   content: "\276F";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 1em;
   height: 1em;
-  text-align: center;
+  /* text-align: center; */
   transform: rotate(90deg);
-  transition: all 0.35s;
+  /* transition: all 0.35s; */
 }
 
 .tab input:checked+.tab__label::after {
@@ -91,8 +98,16 @@
 
 .tab__content p {
   margin: 0;
-  padding: 1rem;
-  font-size: clamp(1rem, 0.5rem + 1vw, 1.6rem);
+  padding: 22px;
+  font-size: clamp(18px, 10px + 1vw, 28px);
+
+  @media screen and (width <=768px) {
+    padding: 20px;
+  }
+
+  @media screen and (width <=576px) {
+    padding: 18px;
+  }
 }
 
 .tab__content span {

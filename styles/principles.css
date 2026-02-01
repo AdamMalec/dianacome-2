@@ -1,14 +1,18 @@
 .principles__list {
   display: grid;
-  /* grid-template-columns: repeat(4, 1fr); */
   gap: 18px;
   margin: 0;
-  margin-top: 48px;
+  margin-top: 52px;
   padding: 0;
   list-style: none;
 
   @media screen and (width <= 1024px) {
       grid-template-columns: repeat(2, 1fr);
+      margin-top: 46px;
+  }
+
+  @media screen and (width <= 768px) {
+    margin-top: 40px;
   }
 
   @media screen and (width <= 576px) {
