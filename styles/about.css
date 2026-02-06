@@ -13,12 +13,18 @@
   }
 }
 
-.about__image {
-  border-radius: var(--radius-m);
+/* .about picture {
+  display: contents;
+} */
 
+.about__image {
   @media screen and (width <=768px) {
     margin-inline: auto;
   }
+}
+
+.about__image img {
+  border-radius: var(--radius-m);
 }
 
 .about__intro {

@@ -2,7 +2,10 @@
   position: relative;
   min-height: 100vh;
   background-color: pink;
-  background-image: url(./../img/kobieta-z-widokiem-z-boku-sluchawek_edit.jpg);
+  background-image: image-set(
+    url("./../img/kobieta-z-widokiem-z-boku-sluchawek_edit.avif") type("image/avif"),
+    url("./../img/kobieta-z-widokiem-z-boku-sluchawek_edit.jpg") type("image/image/jpg")
+  ) ;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
