@@ -37,6 +37,11 @@
 
 .timeline-content {
   margin-bottom: 58px;
+  opacity: 0;
+
+  @media screen and (width <= 768px) {
+    margin-top: 6px;
+  }
 }
 
 .timeline-content h3 {
@@ -58,6 +63,7 @@
   text-align: center;
   line-height: 64px;
   border-radius: var(--radius-l);
+  transition-delay: 0.5s;
   background-color: var(--color-bg-gray);
 }
 

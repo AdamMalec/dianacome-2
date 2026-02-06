@@ -125,13 +125,3 @@
 .tab input:not(:checked)+.tab__label:hover::after {
   animation: bounce .5s infinite;
 }
-
-@keyframes bounce {
-  25% {
-    transform: rotate(90deg) translate(.25rem);
-  }
-
-  75% {
-    transform: rotate(90deg) translate(-.25rem);
-  }
-}

@@ -24,6 +24,7 @@
   background-color: var(--color-bg-gray);
   border-radius: var(--radius-l);
   box-shadow: var(--shadow);
+  opacity: 0;
 
   &:not(:first-child) {
     margin-top: 24px;
@@ -54,6 +55,7 @@
   width: max(64px, 9vw);
   max-width: 112px;
   aspect-ratio: 1;
+  object-fit: cover;
   border-radius: 50%;
 }
 

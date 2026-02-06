@@ -28,6 +28,7 @@
   padding: 32px 32px 40px 32px;
   background-color: var(--color-bg-gray);
   border-radius: var(--radius-l);
+  opacity: 0;
 
   @media screen and (width <=576px) {
     padding: 24px 20px 28px 20px;

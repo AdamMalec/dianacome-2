@@ -9,6 +9,7 @@
   --color-bg-default: var(--color-white);
   --color-bg-black: var(--color-black);
   --color-bg-gray: hsl(43, 19%, 86%);
+  --color-bg-timeline: hsl(21, 74%, 81%);
 
   --radius-l: 16px;
   --radius-m: 12px;
@@ -33,4 +34,5 @@ html[data-color-theme='dark'] {
   --color-text-secondary: hsl(0, 0%, 60%);
   --color-bg-default: var(--color-black);
   --color-bg-gray: hsl(0, 0%, 14%);
+  --color-bg-timeline: hsl(12, 35%, 25%);
 }
