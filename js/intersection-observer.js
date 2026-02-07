@@ -30,13 +30,20 @@ const observerTimeline = new IntersectionObserver((entries) => {
 	for (const entry of entries) {
 		if (entry.isIntersecting) {
 			if (tlIndex % 2 !== 0) {
+				// console.log(entry.target.nextElementSibling.firstElementChild);
 				entry.target.classList.add("animate-fade-slide-left");
 				observerTimeline.unobserve(entry.target);
+				setTimeout(() => {
+					entry.target.nextElementSibling.firstElementChild.style.backgroundColor = 'var(--color-bg-timeline)';
+				}, 500);
 			} else {
 				entry.target.classList.add("animate-fade-slide-right");
 				observerTimeline.unobserve(entry.target);
+				setTimeout(() => {
+					entry.target.previousElementSibling.firstElementChild.style.backgroundColor = 'var(--color-bg-timeline)';
+				}, 500);
 			}
-			timelineCountersEls[tlIndex].style.backgroundColor = 'var(--color-bg-timeline)';
+
 			tlIndex++;
 		}
 	}
