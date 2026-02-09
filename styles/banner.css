@@ -1,11 +1,11 @@
-.baner {
+.banner {
   position: relative;
   min-height: 100vh;
   background-color: pink;
   background-image: image-set(
     url("./../img/kobieta-z-widokiem-z-boku-sluchawek_edit.avif") type("image/avif"),
-    url("./../img/kobieta-z-widokiem-z-boku-sluchawek_edit.jpg") type("image/image/jpg")
-  ) ;
+    url("./../img/kobieta-z-widokiem-z-boku-sluchawek_edit.jpg") type("image/jpg")
+  );
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -23,12 +23,12 @@
   }
 }
 
-.baner__title,
-.baner__button {
+.banner__title,
+.banner__button {
   position: absolute;
 }
 
-.baner__title {
+.banner__title {
   width: 16ch;
   margin-top: 0;
   font-family: "Montserrat", sans-serif;
@@ -50,7 +50,7 @@
   }
 }
 
-.baner__button {
+.banner__button {
   bottom: 10vh;
   font-size: 22px;
   font-weight: 600;

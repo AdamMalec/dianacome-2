@@ -1,36 +1,14 @@
-.faq {}
-
 .faq__subtitle {
   max-width: 54ch;
+}
+
+.faq__accordion {
+  margin-top: 48px;
 }
 
 /* Core styles/functionality */
 .tab {
   position: relative;
-}
-
-.tab input {
-  position: absolute;
-  opacity: 0;
-  z-index: -1;
-}
-
-.tab__content {
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.35s;
-}
-
-.tab input:checked~.tab__content {
-  max-height: 10rem;
-}
-
-/* Visual styles */
-.accordion {
-  margin-top: 48px;
-}
-
-.tab {
   border-radius: var(--radius-m);
   border: 4px solid var(--color-bg-gray);
 
@@ -43,6 +21,23 @@
   }
 }
 
+.tab input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.tab__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.32s;
+}
+
+.tab input:checked~.tab__content {
+  max-height: 10rem;
+}
+
+/* Visual styles */
 .tab:has(:focus-visible) {
   outline: 4px solid var(--color-accent);
 }
@@ -84,12 +79,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 1em;
   height: 1em;
-  /* text-align: center; */
   transform: rotate(90deg);
-  /* transition: all 0.35s; */
 }
 
 .tab input:checked+.tab__label::after {

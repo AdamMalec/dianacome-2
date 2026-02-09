@@ -13,10 +13,6 @@
   }
 }
 
-/* .about picture {
-  display: contents;
-} */
-
 .about__image {
   @media screen and (width <=768px) {
     margin-inline: auto;
@@ -72,9 +68,9 @@
   }
 }
 
-.valuest__list {
+.values__list {
   margin-top: 10px;
-  padding-left: 18px;
+  padding-left: 22px;
   font-size: 20px;
 
   li::marker {

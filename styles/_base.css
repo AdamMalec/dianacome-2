@@ -24,29 +24,29 @@ section:not(:first-of-type) {
 	padding-block: 100px;
 
 	@media screen and (width <=1280px) {
-		padding-block: 48px;
+		padding-block: 78px;
 	}
 
 	@media screen and (width <=1024px) {
-		padding-block: 48px;
+		padding-block: 64px;
 	}
 
 	@media screen and (width <=768px) {
-		padding-block: 36px;
+		padding-block: 48px;
 	}
 }
 
 .title {
-  margin-top: 0;
-  font-family: "Montserrat", sans-serif;
-  font-size: clamp(1.2rem, 1rem + 3vw, 54px);
-  font-weight: 900;
-  text-align: center;
-  line-height: 1.2;
+	margin-top: 0;
+	font-family: "Montserrat", sans-serif;
+	font-size: clamp(1.2rem, 1rem + 3vw, 54px);
+	font-weight: 900;
+	text-align: center;
+	line-height: 1.2;
 
-  span {
-    color: var(--color-accent);
-  }
+	span {
+		color: var(--color-accent);
+	}
 }
 
 .subtitle {
@@ -59,6 +59,13 @@ section:not(:first-of-type) {
 
 	span {
 		font-weight: 700;
-    color: var(--color-accent);
-  }
+		color: var(--color-accent);
+	}
+
+	@media screen and (width <=768px) {
+		max-width: none;
+		width: auto;
+		line-height: 1.2;
+		text-wrap: balance;
+	}
 }

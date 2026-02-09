@@ -80,7 +80,6 @@
   @media screen and (width > 575.8px) {
     flex-grow: 1;
     margin-top: 0;
-    /* line-height: 2.2; */
   }
 }
 

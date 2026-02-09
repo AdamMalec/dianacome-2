@@ -1,7 +1,6 @@
 const serviceEls = document.querySelectorAll(".service");
 const reviewEls = document.querySelectorAll(".review");
 const timelineEls = document.querySelectorAll(".timeline-content");
-const timelineCountersEls = document.querySelectorAll(".timeline-circle");
 let tlIndex = 0;
 
 const observerOptions = {
@@ -30,7 +29,6 @@ const observerTimeline = new IntersectionObserver((entries) => {
 	for (const entry of entries) {
 		if (entry.isIntersecting) {
 			if (tlIndex % 2 !== 0) {
-				// console.log(entry.target.nextElementSibling.firstElementChild);
 				entry.target.classList.add("animate-fade-slide-left");
 				observerTimeline.unobserve(entry.target);
 				setTimeout(() => {
@@ -43,12 +41,10 @@ const observerTimeline = new IntersectionObserver((entries) => {
 					entry.target.previousElementSibling.firstElementChild.style.backgroundColor = 'var(--color-bg-timeline)';
 				}, 500);
 			}
-
 			tlIndex++;
 		}
 	}
 }, observerOptions);
-
 
 serviceEls.forEach((el) => {
 	observerServices.observe(el);
