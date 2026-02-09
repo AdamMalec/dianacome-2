@@ -52,13 +52,11 @@
 
 .service__features {
   margin-top: 18px;
-  padding-left: 10px;
-  list-style: none;
-
+  padding-left: 0;
 }
 
 .service__item {
-  padding-left: 8px;
+  list-style-type: none;
 
   &:not(:first-child) {
     margin-top: 0.3rem;
@@ -69,8 +67,9 @@
     text-underline-offset: 5px;
   }
 
-  &::marker {
+  &::before {
     content: "•";
+    margin-right: 8px;
   }
 }
 
