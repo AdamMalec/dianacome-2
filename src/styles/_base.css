@@ -81,7 +81,7 @@ a {
 
 	span {
 		font-weight: 700;
-		color: var(--color-accent);
+		color: hsl(from var(--color-accent) h 83% 43%);
 	}
 
 	@media screen and (width <=768px) {
