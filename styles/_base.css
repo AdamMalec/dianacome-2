@@ -14,6 +14,10 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	min-width: 320px;
 	min-height: 100vh;
@@ -34,6 +38,24 @@ section:not(:first-of-type) {
 	@media screen and (width <=768px) {
 		padding-block: 48px;
 	}
+}
+
+a {
+	text-decoration: none;
+}
+
+.chrome-button {
+	background: linear-gradient(to bottom, #4d90fe, #4787ed);
+	border: 1px solid #3079ed;
+	color: white;
+	box-shadow: 0 1px 3px rgba(66, 133, 244, 0.3);
+}
+
+.firefox-button {
+	background: linear-gradient(to bottom, #0a84ff, #0060df);
+	border: 1px solid #0060df;
+	color: white;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
 }
 
 .title {
