@@ -107,6 +107,12 @@
   font-weight: 600;
 }
 
+html[data-color-theme='dark'] {
+  .tab__content span {
+    color: var(--color-accent);
+  }
+}
+
 .tab__close {
   justify-content: flex-end;
   padding: 0.5rem 1rem;

@@ -91,3 +91,9 @@ a {
 		text-wrap: balance;
 	}
 }
+
+html[data-color-theme='dark'] {
+  .subtitle span {
+    color: var(--color-accent);
+  }
+}
