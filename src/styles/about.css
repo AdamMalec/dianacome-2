@@ -1,6 +1,7 @@
 .about {
   display: grid;
-  gap: 24px;
+  column-gap: min(48px, 3vw);
+  row-gap: 24px;
 
   padding-bottom: 148px !important;
 
