@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Allow: /*?utm_
+Allow: /*?gclid
+Allow: /*?yclid
+Allow: /*?openstat
+Allow: /*?fbclid
+Allow: /*?*
