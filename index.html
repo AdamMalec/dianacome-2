@@ -496,29 +496,43 @@
     <div class="footer__container container">
       <div class="footer__wrapper">
         <h2 class="footer__title">Diana Come Digital Brand Agency</h2>
-        <form class="footer__form" id="form" action="">
+        <form class="footer__form" id="form" method="POST" novalidate>
 
           <div class="field">
             <label for="name">Name</label>
-            <input id="name" name="name" type="text" required>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              autocomplete="name"
+              pattern="[\p{L}\p{M}\- ]+"
+              data-error-message="Letters, hyphens and spaces are allowed only."
+              required
+            >
+            <span class="input-error-message" id="name-error" aria-live="polite"></span>
           </div>
 
           <div class="field">
             <label for="email">E-mail</label>
-            <input id="email" name="email" type="email" required>
+            <input id="email" name="email" type="email" inputmode="email" autocomplete="email" required>
+            <span class="input-error-message" id="email-error" aria-live="polite"></span>
           </div>
 
           <div class="field">
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="3" required></textarea>
+            <span class="input-error-message" id="message-error" aria-live="polite"></span>
           </div>
 
           <div class="field">
-            <label for="phone">Phone number</label>
-            <input id="phone" name="phone" type="email" required>
+            <label for="tel">Phone number</label>
+            <input id="tel" name="tel" type="tel" inputmode="tel" autocomplete="tel">
+            <span class="input-error-message" id="tel-error" aria-live="polite"></span>
           </div>
 
-          <button type="submit">Send</button>
+          <button type="submit" aria-describedby="empty-error">Send</button>
+          <span class="form-error-message" id="empty-error" aria-live="assertive"></span>
+          <div class="loader"></div>
         </form>
         <div class="footer__subscribe">
           <span>Subscribe</span>

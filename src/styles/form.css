@@ -1,4 +1,6 @@
 .footer {
+  --color-error: rgb(255, 53, 53);
+  --color-bg-error: hsl(from var(--color-error) h s l / 0.1);
 
   /* reset default styles */
   input,
@@ -8,15 +10,17 @@
   }
 
   form {
+    position: relative;
     display: flex;
     flex-direction: column;
-    gap: 21px;
+    gap: 24px;
     width: 80%;
     margin: 0 auto;
     padding: 32px 36px 42px 36px;
     background-color: var(--color-bg-gray);
     border-radius: var(--radius-s);
     box-shadow: var(--shadow);
+    overflow-x: hidden;
 
     @media screen and (width <=1280px) {
       width: 86%;
@@ -36,6 +40,7 @@
   }
 
   .field {
+    position: relative;
     display: flex;
     flex-direction: column;
   }
@@ -43,7 +48,7 @@
   label {
     padding-bottom: 10px;
 
-    &:not([for="phone"]):after {
+    &:not([for="tel"]):after {
       content: " *";
       color: var(--color-accent);
     }
@@ -59,8 +64,60 @@
     background-color: var(--color-bg-default);
 
     &:focus {
-      outline: 2px solid var(--color-accent);
+      outline: 2px solid var(--color-text-primary);
     }
+  }
+
+  .input-error {
+    background-color: var(--color-bg-error);
+  }
+
+  .input-error-message,
+  .form-error-message {
+    position: absolute;
+    bottom: calc(-1rem - 2px);
+    min-width: max-content;
+    font-size: 16px;
+    color: var(--color-error);
+  }
+
+  .form-error-message {
+    bottom: 1rem;
+  }
+
+  .loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+  }
+
+  .loader--active {
+    display: flex;
+  }
+
+  .loader:after,
+  .loader:before {
+    border-radius: 100%;
+    display: block;
+    content: '';
+    position: absolute;
+  }
+
+  .loader:after {
+    height: 15px;
+    width: 15px;
+    animation: spin 1s infinite linear;
+    box-shadow: 19px 0 0 0 var(--color-accent), -19px 0 0 0 var(--color-accent);
+  }
+
+  .loader:before {
+    height: 40px;
+    width: 40px;
+    border: 2px solid var(--color-text-primary);
   }
 
   button[type="submit"] {
