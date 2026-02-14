@@ -1,5 +1,6 @@
 export default {
-  base: '/',
+  build: { outDir: '..' },
+  base: '/dianacome-2/',
   css: {
     transformer: 'lightningcss',
   },
