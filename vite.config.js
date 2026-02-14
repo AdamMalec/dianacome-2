@@ -1,5 +1,5 @@
 export default {
-  // base: '/dianacome-2/',
+  base: '/',
   css: {
     transformer: 'lightningcss',
   },
