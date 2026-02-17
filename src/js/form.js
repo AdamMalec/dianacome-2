@@ -108,6 +108,7 @@ async function handleFormSubmit(event) {
     const data = serializeForm(formEl);
     toggleLoader();
     const { status, error } = await sendData(data);
+    console.log(status || error);
     toggleLoader();
     if (status === 200) {
       modalEl.showModal();
