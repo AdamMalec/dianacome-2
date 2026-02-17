@@ -1,0 +1,19 @@
+.modal {
+  gap: 24px;
+  padding: 32px;
+  background-color: var(--color-bg-gray);
+  border-color: var(--color-text-primary);
+  border-radius: var(--radius-m);
+}
+
+.modal__title {
+  color: var(--color-text-primary);
+  text-align: center;
+  line-height: 1.4;
+}
+
+.modal__button {
+  display: block;
+  margin-top: 24px;
+  margin-inline: auto;
+}

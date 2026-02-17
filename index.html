@@ -496,19 +496,10 @@
     <div class="footer__container container">
       <div class="footer__wrapper">
         <h2 class="footer__title">Diana Come Digital Brand Agency</h2>
-        <form class="footer__form" id="form" method="POST" novalidate>
-
+        <form class="footer__form" id="form" name="contact" method="POST" novalidate netlify>
           <div class="field">
             <label for="name">Name</label>
-            <input
-              id="name"
-              name="name"
-              type="text"
-              autocomplete="name"
-              pattern="[\p{L}\p{M}\- ]+"
-              data-error-message="Letters, hyphens and spaces are allowed only."
-              required
-            >
+            <input id="name" name="name" type="text" autocomplete="name" pattern="[\p{L}\p{M}\- ]+" data-error-message="Letters, hyphens and spaces are allowed only." required>
             <span class="input-error-message" id="name-error" aria-live="polite"></span>
           </div>
 
@@ -558,6 +549,13 @@
       <p class="footer__copyright">2026 DianaCome | dianacome.com</p>
     </div>
   </footer>
+
+  <dialog class="modal" id="modal" aria-labelledby="dialog-name">
+    <h3 class="modal__title" id="dialog-name">
+      Thank you!<br> Your data has been sent
+    </h3>
+    <button class="modal__button" onclick="window.modal.close()">Close</button>
+  </dialog>
 
   <script src="./src/main.js" type="module"></script>
 </body>

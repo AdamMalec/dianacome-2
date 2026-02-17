@@ -18,11 +18,21 @@ html {
 	scroll-behavior: smooth;
 }
 
+html,
+body {
+	scrollbar-gutter: stable;
+}
+
 body {
 	min-width: 320px;
 	min-height: 100vh;
 	margin: 0;
 }
+
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
 
 section:not(:first-of-type) {
 	padding-block: 100px;
@@ -93,7 +103,7 @@ a {
 }
 
 html[data-color-theme='dark'] {
-  .subtitle span {
-    color: var(--color-accent);
-  }
+	.subtitle span {
+		color: var(--color-accent);
+	}
 }

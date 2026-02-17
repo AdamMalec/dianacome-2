@@ -3,6 +3,7 @@ const inputListEl = Array.from(formEl.querySelectorAll('input'));
 const textareaEl = formEl.querySelector('#message');
 const buttonEl = formEl.querySelector('button');
 const formErrorEl = formEl.querySelector('.form-error-message');
+const modalEl = document.querySelector('.modal');
 
 function startInputValidation() {
   inputListEl.forEach((inputElement) => {
@@ -85,15 +86,15 @@ function toggleLoader() {
 };
 
 async function sendData(data) {
-  return await fetch('/api/apply/', {
+  return await fetch('/', {
     method: 'POST',
-    body: data,
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(data).toString(),
   })
 }
 
 async function handleFormSubmit(event) {
   event.preventDefault();
-
 
   if (hasInvalidInput()) {
     formError()
@@ -103,16 +104,18 @@ async function handleFormSubmit(event) {
     })
     checkInputValidity(textareaEl);
     toggleInputError(textareaEl);
-  }
-
-  const data = serializeForm(formEl);
-  toggleLoader();
-  const { status, error } = await sendData(data);
-  toggleLoader();
-  if (status === 200) {
-    alert('Your request has been sent!');
   } else {
-    alert(error.message);
+    const data = serializeForm(formEl);
+    toggleLoader();
+    const { status, error } = await sendData(data);
+    toggleLoader();
+    if (status === 200) {
+      modalEl.showModal();
+      inputListEl.forEach(input => input.value = '');
+      textareaEl.value = '';
+    } else {
+      alert(error.message);
+    }
   }
 };
 
