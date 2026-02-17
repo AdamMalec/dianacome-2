@@ -83,6 +83,12 @@
 
   .form-error-message {
     bottom: 1rem;
+    width: calc(100% - 72px);
+    text-align: center;
+
+    @media screen and (width <=768px) {
+      width: calc(100% - 48px);
+    }
   }
 
   .loader {
