@@ -42,7 +42,7 @@ function toggleInputError(inputElement) {
 
 function toggleErrorSpan(inputElement, errorMessage) {
   const errorElement = document.querySelector(`#${inputElement.id}-error`);
-
+  console.log(errorElement);
   if (errorMessage) {
     inputElement.classList.add('input-error');
     errorElement.textContent = errorMessage;
