@@ -1,5 +1,4 @@
 export default {
-  build: { outDir: '..' },
   base: '/',
   css: {
     transformer: 'lightningcss',
