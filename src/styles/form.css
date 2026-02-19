@@ -86,7 +86,7 @@
   }
 
   .form-error-message {
-    bottom: calc(2rem + 54px);
+    bottom: calc(2rem + 58px);
     width: calc(100% - 72px);
     text-align: center;
 
