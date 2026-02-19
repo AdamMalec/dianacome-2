@@ -22,6 +22,10 @@
     box-shadow: var(--shadow);
     overflow-x: hidden;
 
+    &.form-error {
+      box-shadow: 2px 4px 6px 0 hsl(from var(--color-error) h s l / 0.7);
+    }
+
     @media screen and (width <=1280px) {
       width: 86%;
     }
@@ -82,7 +86,7 @@
   }
 
   .form-error-message {
-    bottom: 1rem;
+    bottom: calc(2rem + 54px);
     width: calc(100% - 72px);
     text-align: center;
 

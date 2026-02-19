@@ -63,8 +63,10 @@ function hasInvalidInput() {
 function formError() {
   const errorMessage = 'Please fill in the required fields to submit.';
   formErrorEl.textContent = errorMessage;
+  formEl.classList.add('form-error');
   setTimeout(() => {
     formErrorEl.textContent = '';
+    formEl.classList.remove('form-error');
   }, 4000);
 }
 
@@ -98,12 +100,12 @@ async function handleFormSubmit(event) {
 
   if (hasInvalidInput()) {
     formError()
-    inputListEl.forEach((inputElement) => {
-      checkInputValidity(inputElement);
-      toggleInputError(inputElement);
-    })
-    checkInputValidity(textareaEl);
-    toggleInputError(textareaEl);
+    // inputListEl.forEach((inputElement) => {
+    //   checkInputValidity(inputElement);
+    //   toggleInputError(inputElement);
+    // })
+    // checkInputValidity(textareaEl);
+    // toggleInputError(textareaEl);
   } else {
     const data = serializeForm(formEl);
     toggleLoader();
