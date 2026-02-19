@@ -31,9 +31,9 @@
   opacity: 0;
   box-shadow: var(--shadow);
 
-  &:nth-child(2) {animation-delay: 250ms;}
-  &:nth-child(3) {animation-delay: 500ms;}
-  &:nth-child(4) {animation-delay: 750ms;}
+  &:nth-child(2) {animation-delay: 200ms;}
+  &:nth-child(3) {animation-delay: 400ms;}
+  &:nth-child(4) {animation-delay: 600ms;}
 
   @media screen and (width <=576px) {
     padding: 24px 20px 28px 20px;
