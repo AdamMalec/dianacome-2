@@ -33,7 +33,6 @@ body:has(dialog[open]) {
   overflow: hidden;
 }
 
-
 section:not(:first-of-type) {
 	padding-block: 100px;
 

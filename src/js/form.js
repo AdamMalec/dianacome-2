@@ -1,9 +1,14 @@
+import emailjs from '@emailjs/browser';
+
 const formEl = document.getElementById('form');
 const inputListEl = Array.from(formEl.querySelectorAll('input'));
 const textareaEl = formEl.querySelector('#message');
-const buttonEl = formEl.querySelector('button');
 const formErrorEl = formEl.querySelector('.form-error-message');
 const modalEl = document.querySelector('.modal');
+
+const serviceID = 'service_fiwatjb';
+const templateID = 'template_1ml7ldb';
+const pubKey = 'Fy2E5fMFs7HbsJOvm';
 
 function startInputValidation() {
   inputListEl.forEach((inputElement) => {
@@ -42,15 +47,12 @@ function toggleInputError(inputElement) {
 
 function toggleErrorSpan(inputElement, errorMessage) {
   const errorElement = inputElement.nextElementSibling;
-  console.log(errorElement);
   if (errorMessage) {
     inputElement.classList.add('input-error');
     errorElement.textContent = errorMessage;
-    // errorElement.classList.add('error-active');
   } else {
     inputElement.classList.remove('input-error');
     errorElement.textContent = '';
-    // errorElement.classList.remove('error-active');
   }
 };
 
@@ -70,28 +72,23 @@ function formError() {
   }, 4000);
 }
 
-function serializeForm(formNode) {
-  const { elements } = formNode;
-  const formData = new FormData();
-  Array.from(elements)
-    .filter((item) => !!item.name)
-    .forEach((element) => {
-      const { name, value } = element;
-      formData.append(name, value);
-    })
-  return formData;
-};
-
 function toggleLoader() {
   const loader = document.querySelector('.loader');
   loader.classList.toggle('loader--active');
 };
 
+function getData(formNode) {
+  const data = new FormData(formNode);
+  data.append('service_id', serviceID);
+  data.append('template_id', templateID);
+  data.append('user_id', pubKey);
+  return data;
+}
+
 async function sendData(data) {
-  return await fetch('/', {
+  return await fetch('https://api.emailjs.com/api/v1.0/email/send-form', {
     method: 'POST',
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(data).toString(),
+    body: data,
   })
 }
 
@@ -100,24 +97,17 @@ async function handleFormSubmit(event) {
 
   if (hasInvalidInput()) {
     formError()
-    // inputListEl.forEach((inputElement) => {
-    //   checkInputValidity(inputElement);
-    //   toggleInputError(inputElement);
-    // })
-    // checkInputValidity(textareaEl);
-    // toggleInputError(textareaEl);
   } else {
-    const data = serializeForm(formEl);
+    const data = getData(formEl)
     toggleLoader();
     const { status, error } = await sendData(data);
-    console.log(status || error);
     toggleLoader();
     if (status === 200) {
       modalEl.showModal();
       inputListEl.forEach(input => input.value = '');
       textareaEl.value = '';
     } else {
-      alert(error.message);
+      console.log(error.message);
     }
   }
 };
@@ -127,3 +117,11 @@ startInputValidation();
 
 // validate and send data
 formEl.addEventListener('submit', handleFormSubmit);
+
+// start emailjs service
+(function () {
+  emailjs.init({
+    publicKey: pubKey,
+    blockHeadless: true,
+  });
+})();
