@@ -58,7 +58,7 @@ function toggleErrorSpan(inputElement, errorMessage) {
 
 function hasInvalidInput() {
   return (
-    inputListEl.some(inputElement => !inputElement.validity.valid)
+    inputListEl.some(inputElement => !inputElement.validity.valid) || !textareaEl.validity.valid
   )
 }
 
