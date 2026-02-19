@@ -7,7 +7,7 @@
 }
 
 .animate-fade-slide-top {
-  animation: fade-slide-top 0.5s ease-out forwards;
+  animation: fade-slide-top 0.8s linear(0, 0.007 1.1%, 0.029 2.3%, 0.121 5%, 0.239 7.5%, 0.631 15%, 0.743 17.5%, 0.832 19.8%, 0.906 22.1%, 0.966 24.5%, 1.013 27%, 1.046 29.6%, 1.07 33.1%, 1.076 37.2%, 1.066 41.8%, 1.016 55.2%, 0.999 63.4%, 0.994 73.4%, 1) forwards;
 }
 
 .animate-fade-slide-left {
