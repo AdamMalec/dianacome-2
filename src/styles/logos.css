@@ -3,10 +3,10 @@
 }
 
 .logos__container {
-  --gap: 64px;
+  --gap: 96px;
   display: flex;
   gap: var(--gap);
-  max-width: 60vw;
+  max-width: 68vw;
   overflow: hidden;
   user-select: none;
 
@@ -39,12 +39,11 @@
   gap: var(--gap);
   min-width: 100%;
 
-  animation: scroll 26s linear infinite;
+  animation: scroll 36s linear infinite;
 }
 
 .logos__item {
-  width: 72px;
-  aspect-ratio: 1;
+  max-height: 96px;
 }
 
 .logos__item svg {
