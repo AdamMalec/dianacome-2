@@ -50,18 +50,20 @@
   width: 3em;
   height: 1.5em;
   border-radius: 0.75em;
-  box-shadow: 0 0 0 0.125em var(--color-text-primary);
+  box-shadow: 0 0 0 2px var(--color-text-primary);
   transition:
     background-color var(--trans-dur) var(--trans-timing),
     box-shadow 0.14s linear;
-
-  outline: transparent;
   appearance: none;
   cursor: pointer;
 }
 
 .switcher__input:focus-visible {
-  box-shadow: 0 0 0 0.125em var(--color-accent);
+  box-shadow: 0px 0px 0px 4px #0060df ;
+
+  &:after {
+    background-color: var(--color-accent);
+  }
 }
 
 .switcher__input:before,

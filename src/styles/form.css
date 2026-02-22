@@ -23,7 +23,9 @@
     overflow-x: hidden;
 
     &.form-error {
-      box-shadow: 2px 4px 6px 0 hsl(from var(--color-error) h s l / 0.7);
+      box-shadow:
+        var(--shadow),
+        0px 0px 1px 3px hsl(from var(--color-error) h s l / 0.6);
     }
 
     @media screen and (width <=1280px) {
@@ -68,7 +70,9 @@
     background-color: var(--color-bg-default);
 
     &:focus {
-      outline: 2px solid var(--color-text-primary);
+      outline: 1px solid var(--color-text-primary);
+      outline-offset: 2px;
+      box-shadow: 0px 0px 0px 1px #0060df;
     }
   }
 
@@ -150,6 +154,12 @@
     &:focus-visible {
       background-color: var(--color-accent);
       cursor: pointer;
+    }
+
+    &:focus-visible {
+      outline: 1px solid var(--color-text-primary);
+      outline-offset: 2px;
+      box-shadow: 0px 0px 0px 1px #0060df;
     }
   }
 }
