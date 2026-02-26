@@ -45,9 +45,6 @@
   @media screen and (width <=768px) {
     width: auto;
     line-height: 1.2;
-  }
-
-  @media screen and (width <= 576px) {
     text-align: center;
   }
 }
