@@ -21,9 +21,9 @@
   position: absolute;
   content: '';
   inset: 0;
-  background-image: url("../img/shape-3.svg");
+  background-image: url("../img/shape-1.svg");
   background-repeat: no-repeat;
-  background-size: 20%;
+  background-size: 15%;
   background-position: left 96%;
   opacity: 0;
 
