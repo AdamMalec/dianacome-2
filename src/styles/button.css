@@ -6,7 +6,9 @@
   background-color: var(--color-bg-black);
   border-radius: var(--radius-s);
   border: 2px outset var(--color-white);
-  transition: background-color 0.12s;
+  transition:
+    background-color 0.12s,
+    transform 0.12s;
   cursor: pointer;
 
   &:hover,
@@ -20,6 +22,7 @@
 
   &:active {
     border-style: inset;
+    transform: scale(0.97);
   }
 }
 
